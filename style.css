@@ -1,0 +1,104 @@
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter Semibold";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("./assets/fonts/static/Inter-Bold.ttf");
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --black: hsl(0, 0%, 8%);
+
+  --ft-regular: Inter;
+  --ft-semibold: "Inter Semibold";
+  --ft-bold: "Inter Bold";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ft-regular);
+  font-size: 14px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.card {
+  width: 385px;
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+section {
+  width: 100%;
+  text-align: center;
+}
+
+.userpic {
+  border-radius: 50%;
+  width: 89px;
+}
+
+.username {
+  font-family: var(--ft-semibold);
+  font-size: 23px;
+  margin-bottom: 10px;
+  letter-spacing: .5px;
+}
+
+.useraddress {
+  color: var(--green);
+  font-family: var(--ft-semibold);
+  letter-spacing: .1px;
+}
+
+.social-list {
+  list-style-type: none;
+  margin-top: 26px;
+}
+
+.social-link {
+  background-color: var(--grey);
+  font-family: var(--ft-semibold);
+  padding: 14px;
+  margin-top: 16px;
+  border-radius: 8px;
+  transition: .2s;
+}
+
+.social-link:hover {
+  background-color: var(--green);
+  color: var(--dark-grey);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 327px;
+    padding: 24px;
+  }
+}
